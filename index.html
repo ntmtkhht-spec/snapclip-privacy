@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapClip — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #1A1A1E;
+      --card-bg: #242428;
+      --border: #3A3A42;
+      --text: #E8E8EC;
+      --text-secondary: #8A8A96;
+      --accent: #4A9EFF;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { max-width: 640px; margin: 0 auto; padding: 48px 32px 80px; }
+    h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+    .subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 32px; }
+    h2 { font-size: 16px; font-weight: 600; margin: 28px 0 10px; color: var(--accent); }
+    p, ul { margin-bottom: 14px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .highlight {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    @media (max-width: 480px) { .page { padding: 24px 16px 60px; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">SnapClip Browser Extension &mdash; Last updated: May 27, 2026</p>
+
+    <div class="highlight">
+      <strong>TL;DR:</strong> SnapClip works 100% locally on your device. No data is collected, transmitted, or shared with anyone. Your screenshots never leave your browser.
+    </div>
+
+    <h2>1. Data Collection</h2>
+    <p>SnapClip does <strong>not</strong> collect, store, or transmit any personal data. Specifically:</p>
+    <ul>
+      <li>No analytics or tracking scripts</li>
+      <li>No cookies or fingerprinting</li>
+      <li>No user accounts or registration</li>
+      <li>No external network requests</li>
+      <li>No telemetry of any kind</li>
+    </ul>
+
+    <h2>2. Screenshot Storage</h2>
+    <p>All screenshots are stored <strong>locally</strong> in your browser using IndexedDB. They are never uploaded to any server. You can delete all stored screenshots at any time through the History page.</p>
+    <p>Settings are stored locally using Chrome's <code>chrome.storage.sync</code> API, which syncs preferences across your signed-in Chrome browsers. No third party can access this data.</p>
+
+    <h2>3. Permissions Explained</h2>
+    <p>SnapClip requests the following browser permissions, each for a specific technical reason:</p>
+    <ul>
+      <li><strong>activeTab</strong> &mdash; Capture the currently visible tab when you click a capture button</li>
+      <li><strong>scripting</strong> &mdash; Inject the selection overlay and scroll-stitch logic for full-page captures</li>
+      <li><strong>tabs</strong> &mdash; Read the page title and URL to label your screenshots in history</li>
+      <li><strong>clipboardWrite</strong> &mdash; Copy screenshots directly to your clipboard</li>
+      <li><strong>storage / unlimitedStorage</strong> &mdash; Save screenshots locally in IndexedDB and sync settings</li>
+      <li><strong>offscreen</strong> &mdash; Write to clipboard from the background when the popup is closed</li>
+      <li><strong>notifications</strong> &mdash; Show a notification when capturing on restricted browser pages</li>
+      <li><strong>host_permissions (&lt;all_urls&gt;)</strong> &mdash; Required for full-page scroll capture and Site Capture on any website. Without this, the extension cannot capture pages opened programmatically.</li>
+    </ul>
+
+    <h2>4. Site Capture</h2>
+    <p>The Site Capture feature discovers same-origin links on the current page and opens them one at a time to take full-page screenshots. All link discovery and capture happens locally in your browser. No data about discovered URLs or captured pages is sent anywhere.</p>
+
+    <h2>5. Third-Party Libraries</h2>
+    <p>SnapClip bundles <strong>JSZip</strong> (MIT license) for ZIP file generation. JSZip runs entirely in-browser and makes no network requests.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>SnapClip does not collect data from anyone, including children under 13.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>If this policy is updated, the changes will be published with the next extension update. The "Last updated" date above will be revised accordingly.</p>
+
+    <h2>8. Contact</h2>
+    <p>For questions about this privacy policy, contact: <a href="mailto:ntmtkhht@gmail.com">ntmtkhht@gmail.com</a></p>
+
+    <div class="footer">
+      &copy; 2026 SnapClip. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>
